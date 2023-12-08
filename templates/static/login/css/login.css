@@ -1,3 +1,53 @@
+body{
+    background-color: #0D3D60 !important;
+}
+
+div.ImgLogo{
+    width: 22vw !important;
+    height: 40vh !important;
+    margin-left: 33vw !important;
+    margin-top: 10vh !important;
+    border-radius: 10px !important;
+    margin-bottom: 3vh !important;
+}
+
+img#logo{
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 10px !important;
+}
+
+.form-label{
+    display: inline-block !important;
+    width: 30vw !important;
+    margin-left: 28vw !important;
+    margin-top: 1vh !important;
+    color: white !important;
+}
+
+#exampleFormControlInput1{
+    display: inline-block !important;
+    width: 30vw !important;
+    margin-left: 28vw !important;
+    margin-top: 1vh !important;
+}
+
 .form-control{
-    color: red;
+    display: inline-block !important;
+    width: 30vw !important;
+    margin-left: 28.8vw !important;
+    margin-top: 1vh !important;
+    color: black !important;
+}
+
+#btnEntrar{
+    display: inline-block !important;
+    width: 30vw !important;
+    margin-left: 28vw !important;
+    margin-top: 3vh !important;
+    background-color: white !important; 
+    color: black !important;
+    border-color: #0D3D60 !important;
+    border-radius: 10px !important;
+    border-style: solid !important;
 }

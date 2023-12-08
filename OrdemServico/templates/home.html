@@ -12,37 +12,158 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Peças
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{% url 'pecas' %}">Peças</a></li>
-                  <li><a class="dropdown-item" href="{% url 'addpecas' %}">Add Peças</a></li>
+            <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown drop">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Peças
+                        </a>
+                        <ul class="dropdown-menu menu">
+                            <li><a class="dropdown-item" href="{% url 'pecas' %}">Lista de Peças</a></li>
+                            <li><a class="dropdown-item" href="{% url 'addpecas' %}">Adicionar Peças</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown drop">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Clientes
+                        </a>
+                        <ul class="dropdown-menu menu">
+                            <li><a class="dropdown-item" href="{% url 'clientes' %}">Lista de Clientes</a></li>
+                            <li><a class="dropdown-item" href="{% url 'addclientes' %}">Adicionar Clientes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown drop">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Mecânicos
+                        </a>
+                        <ul class="dropdown-menu menu">
+                            <li><a class="dropdown-item" href="{% url 'mecanicos' %}">Lista de Mecânicos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'addmecanicos' %}">Adicionar Mecânicos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown drop">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Veículos
+                        </a>
+                        <ul class="dropdown-menu menu">
+                            <li><a class="dropdown-item" href="{% url 'veiculos' %}">Lista de Veículos</a></li>
+                            <li><a class="dropdown-item" href="{% url 'addveiculos' %}">Adicionar Veículos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown drop">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Equipes
+                        </a>
+                        <ul class="dropdown-menu menu">
+                            <li><a class="dropdown-item" href="{% url 'equipes' %}">Lista de Equipes</a></li>
+                            <li><a class="dropdown-item" href="{% url 'addequipes' %}">Adicionar Equipe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown drop">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Serviços
+                        </a>
+                        <ul class="dropdown-menu menu">
+                            <li><a class="dropdown-item" href="{% url 'listaordensservico' %}">Lista de Serviços</a></li>
+                            <li><a class="dropdown-item" href="{% url 'addordemservico' %}">Adicionar Serviços</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <button type="button" class="btn"><a href="{% url 'logout' %}" class="btnLogout">Logout</a></button>
                 </ul>
-              </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link2
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
+
+    <div class="container-fluid d-flex">
+        <!-- Carrossel à Esquerda -->
+        <div class="container-carrosel">
+            <div class="row">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'home/img/foto_1.jpg' %}" class="d-block img_Carossel mx-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/img/foto_2.jpg' %}" class="d-block img_Carossel mx-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'home/img/foto_3.jpg' %}" class="d-block img_Carossel mx-150" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-btnOptions mt-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 g-4 ml-auto">
+            <!-- Linha 1 -->
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'pecas' %}">Lista de Peças</a></button>
+            </div>
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'addpecas' %}">Adicionar Peças</a></button>
+            </div>
+    
+            <!-- Linha 2 -->
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'clientes' %}">Lista de Clientes</a></button>
+            </div>
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'addclientes' %}">Adicionar Clientes</a></button>
+            </div>
+    
+            <!-- Linha 3 -->
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'mecanicos' %}">Lista de Mecânicos</a></button>
+            </div>
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'addmecanicos' %}">Adicionar Mecânicos</a></button>
+            </div>
+    
+            <!-- Linha 4 -->
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'veiculos' %}">Lista de Veículos</a></button>
+            </div>
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'addveiculos' %}">Adicionar Veículos</a></button>
+            </div>
+
+            <!-- Linha 5 -->
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'equipes' %}">Lista de Equipes</a></button>
+            </div>
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'addequipes' %}">Adicionar Equipe</a></button>
+            </div>
+
+            <!-- Linha 6 -->
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'listaordensservico' %}">Lista de Serviços</a></button>
+            </div>
+            <div class="col-btn">
+                <button class="btn btn-primary btn-block btnOptions"><a class="LinkBtn" href="{% url 'addordemservico' %}">Adicionar Serviços</a></button>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>
